@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link type="text/css" rel="stylesheet" href="jalalidatepicker.min.css" />
+    <script type="text/javascript" src="jalalidatepicker.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
+    <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
+
+</head>
+<body>
+
+    <form>
+        <input type="text" placeholder="تاریخ را وارد کنید" data-jdp>
+    </form>
+
+    <script>
+        const moment = require('jalali-moment');
+
+        // تبدیل تاریخ شمسی به میلادی
+        const jalaliDate = '1402-08-20'; // به عنوان مثال
+        const gregorianDate = moment(jalaliDate, 'jalali').format('YYYY-MM-DD');
+
+        console.log('تاریخ شمسی:', jalaliDate);
+        console.log('تاریخ میلادی:', gregorianDate);
+
+    </script>
+
+    <script>
+        jalaliDatepicker.startWatch();
+    </script>
+    
+</body>
+</html>
